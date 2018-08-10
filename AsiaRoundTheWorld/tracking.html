@@ -6,7 +6,7 @@
 
     <script src="assets/leaflet.js"></script>
     <script>
-        window.WINDY_BOOT_RELATIVE=true;
+        window.WINDY_BOOT_RELATIVE=false;
     </script>
       <script src="https://api4.windy.com/assets/libBoot.js"></script>
 
@@ -64,7 +64,9 @@
         }
       };
 
-      fetch('/Content/boats.json')
+
+        fetch('https://api4.windy.com/assets/boats.json')
+//      fetch('Content/boats.json')
         .then(response => response.json())
         .then(result => result.result)
         .then(result => {
